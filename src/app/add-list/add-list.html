@@ -22,4 +22,5 @@
   </div>
   <button (click)="addList()" class="btn btn-success" [disabled]="form.invalid">Add</button>
 </div>
+  <p *ngIf="isClicked" class="listEvent">List was created!</p>
 

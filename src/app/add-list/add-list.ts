@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   styleUrl: './add-list.css',
 })
 export class AddTask {
+  isClicked=false;
   constructor(private taskService: TaskService) {}
   form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -32,9 +33,13 @@ export class AddTask {
     if (!this.listName.trim()) {
       this.showError = true;
     } else {
+      this.isClicked=true;
       this.taskService.addList(this.listName);
       this.listName = '';
       this.showPopup = false;
+      setTimeout(() => {
+    this.isClicked = false;
+  }, 2000);
     }
   }
   closePopUp() {

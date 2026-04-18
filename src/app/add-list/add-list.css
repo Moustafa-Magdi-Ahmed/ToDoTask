@@ -46,3 +46,34 @@
 .Close:hover {
   color: red;
 }
+.listEvent {
+  color: white;
+  border: white solid;
+  border-radius: 25px;
+  text-align: center;
+  background-color: #333;
+  animation: slideIn 0.4s ease forwards;
+  
+  /* take it out of the flow */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  /* bigger */
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  min-width: 220px;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+}

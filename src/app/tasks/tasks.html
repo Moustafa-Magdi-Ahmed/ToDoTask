@@ -31,6 +31,7 @@
       Add to List
     </button>
 
+
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" href="#" *ngFor="let list of lists" (click)="selectList(list)">{{
         list
@@ -53,3 +54,4 @@
     </li>
   </ul>
 </div>
+  <p *ngIf="isClicked" class="listEvent">Task was created!</p>

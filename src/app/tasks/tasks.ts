@@ -22,6 +22,7 @@ export class Tasks implements OnInit {
   filteredTasks: Task[] = [];
   listSelected = '';
   listShowed='';
+  isClicked=false;
   form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
   });
@@ -73,6 +74,10 @@ export class Tasks implements OnInit {
       this.taskName = '';
       this.showPopup = false;
       this.listSelected = '';
+      this.isClicked=true;
+        setTimeout(() => {
+    this.isClicked = false;
+  }, 2000);
     }
   }
 

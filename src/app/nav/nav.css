@@ -6,5 +6,11 @@
     padding-bottom: 1vh;
 }
 button{
-    color:white
+    color:white;
+    border:white solid;
+}
+.login {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
 }
